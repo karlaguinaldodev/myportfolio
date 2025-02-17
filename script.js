@@ -1,4 +1,4 @@
-// Smooth scroll for navigation links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,7 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Simple form handling (just for demonstration)
+
 const form = document.querySelector('.contact-form');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -16,7 +16,7 @@ form.addEventListener('submit', function(e) {
     form.reset();
 });
 
-// Add fade-in animation to elements when they come into view
+
 const observerOptions = {
     threshold: 0.2
 };
@@ -30,7 +30,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Select all sections and project cards
+
 document.querySelectorAll('section, .project-card').forEach(element => {
     element.style.opacity = 0;
     element.style.transform = 'translateY(20px)';

@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
     color: #333;
 }
 
-/* Navigation */
+
 nav {
     position: fixed;
     width: 100%;
@@ -59,7 +59,7 @@ nav {
     color: #007bff;
 }
 
-/* Hero Section */
+
 .hero {
     height: 100vh;
     display: flex;
@@ -78,7 +78,7 @@ nav {
     color: #007bff;
 }
 
-/* Sections */
+
 section {
     padding: 5rem 2rem;
 }
@@ -89,7 +89,7 @@ h2 {
     font-size: 2.5rem;
 }
 
-/* About Section */
+
 .about-content {
     max-width: 800px;
     margin: 0 auto;
@@ -110,7 +110,7 @@ h2 {
     border-radius: 20px;
 }
 
-/* Projects Section */
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -178,7 +178,7 @@ h2 {
     line-height: 1.6;
 }
 
-/* Style the View Project buttons */
+
 .project-card a {
     background-color: #007bff;
     color: white;
@@ -198,7 +198,7 @@ h2 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Content wrapper to help with spacing */
+
 .project-card-content {
     display: flex;
     flex-direction: column;
@@ -206,7 +206,7 @@ h2 {
     flex-grow: 1;
 }
 
-/* Contact Section */
+
 .contact-content {
     max-width: 800px;
     margin: 0 auto;
@@ -261,18 +261,18 @@ textarea {
     color: #007bff;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 2rem;
     background-color: #f8f9fa;
 }
 
-/* Profile picture styling */
+
 .profile-section {
     display: flex;
     justify-content: center;
-    margin: 3rem auto 2rem;  /* Adjusted margins */
+    margin: 3rem auto 2rem;  
     padding: 0 2rem;
 }
 
@@ -307,12 +307,12 @@ footer {
     font-size: 1.2rem;
 }
 
-/* Adjust the greeting section spacing */
+
 .greeting {
-    margin-top: 1.5rem;  /* Add space between profile pic and greeting */
+    margin-top: 1.5rem;  
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;

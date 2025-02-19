@@ -1,5 +1,9 @@
+<!-- Halos lahat ay from AI, and may mga dinagdag lang me and inedit. For now inaaral 
+ ko lahat ng mga features ng html and css and javascript. -->
 <!DOCTYPE html>
 <html lang="en">
+    <!-- para hindi kita ng users kaya nasa head and nag add ako ng link ng styles.css and font awesome 
+     para sa mga logo like facebook, instagram, linkedin, github, etc. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+     <!-- navigation bar para sa Portfolio, Home About Projects Contact -->
     <nav>
         <div class="nav-content">
             <div class="logo">
-                <a href="#">Portfolio</a>
+                <a>Portfolio</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -21,54 +26,104 @@
             </ul>
         </div>
     </nav>
-
+    <!--section para sa profile pic, and intro text na unang makikita ng users -->
     <section id="home" class="hero">
         <div class="hero-content">
             <img src="/pictures/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
             <div class="intro-text">
-                <h1>Hi, I'm Karl Angelo Aguinaldo</h1>
-                <p>Web Developer & Designer, Software Engineering Intern at Qrio Solutions</p>
+                <h1>HI, I'M KARL ANGELO AGUINALDO</h1>
+                <p>Web Developer and Software Engineering Intern at Qrio Solutions</p>
             </div>
         </div>
     </section>
 
-    
+    <!--section para sa skills ko and sa hobbies. pinagtabi na yung dalawa kaya sa isang 
+    section lang. I used FontAwesome as well para sa visual representation-->
     <section id="about" class="about">
         <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I'm a passionate web developer with experience in creating responsive and user-friendly websites. I love turning ideas into reality through code.</p>
-                <div class="skills">
-                    <h3>My Skills</h3>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>Responsive Design</li>
-                    </ul>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p> Motivated Information Technology graduate seeking a full-time position to apply my knowledge and gain hands-on experience in a professional setting. 
+                        Reliable, hardworking, and adaptable, with a strong foundation in technical skills in networking and programming. 
+                        Dedicated to contributing to organizational success while continuously developing my expertise for a successful career in IT.
+                        In five years, I see myself as a seasoned IT professional, specializing in network security and software development, leading innovative projects, 
+                        and mentoring junior developers. My goal is to obtain industry certifications and take on leadership roles that drive technological advancements within my organization.</p>
+                    <div class="skills">
+                        <br>
+                        <h3>My Skills</h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>C++</li>
+                            <li>Cisco Networking</li>
+                            <li>Python</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <!--div for my hobbies, and nag add ako ng font awesome para sa mga logo ng gaming, coding, reading, and music-->
+            <div class="hobbies-content">
+                <h2>My Hobbies</h2>
+                <div class="hobby-cards">
+                    <div class="hobby-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Gaming</h3>
+                        <p>Passionate about strategy and adventure games like Dota 2, Valorant and etc.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Coding</h3>
+                        <p>Building personal projects and learning more about programming</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fas fa-book-reader"></i>
+                        <h3>Reading</h3>
+                        <p>Tech blogs and science fiction novels</p>
+                    </div>
+                    <div class="hobby-card">
+                        <i class="fas fa-music"></i>
+                        <h3>Music</h3>
+                        <p>Playing guitar and singing</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+ <!--section para sa mga projects ko naman, i have 3 projects and 1 thesis project nag href 
+ link lang para dalhin yun sa link ng figma at google docs. -->
     <section id="projects" class="projects">
         <h2>My Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <img src="/pictures/featwear.jpg" alt="Project 1">
+                <img src="/pictures/mediquick.png" alt="Project 1">
                 <h3>Project 1</h3>
-                <p>An UI design using Figma for a Techpre website. The Application is a platform for ordering medicine with AI assistance.</p>
+                <p>A UI design using Figma for a Techpre website. The Application is a platform for ordering medicine with AI assistance.</p>
                 <a href="https://www.figma.com/design/aiFXK8tkUc4M8P8F1xWXrC/Techpre-Design?node-id=0-1&p=f&t=WqRtn3xPxdvclnKn-0" target="_blank" class="btn">View Project on Figma</a>
             </div>
             <div class="project-card">
-                <img class = "featwear" src="/pictures/mediquick.jpg" alt="Project 2">
+                <img class = "featwear" src="/pictures/featwear.png" alt="Project 2">
                 <h3>Project 2</h3>
-                <p>An UI design using Figma for a System Design website. The System is a platform for ordering shoes.</p>
+                <p>A UI design using Figma for a System Design website. The System is a platform for ordering shoes.</p>
                 <a href="https://www.figma.com/design/0isrNH1aHj9SRpiG369K11/Purchasing-Team?node-id=308-3891&t=MafPgmJSl1dhFjCE-0" target="_blank" class="btn">View Project on Figma</a>
+            </div>
+            <div class="project-card">
+                <img class = "dental-clinic" src="/pictures/dental-clinic.png" alt="Project 2">
+                <h3>Project 3</h3>
+                <p>The creation of UI design for an online appointment scheduling website for Saver Dental Clinic.</p>
+                <a href="https://docs.google.com/document/d/1jsgSc0fKoaxedd6Uvq4e-0MaeroYDUcG1SkN2Td0v1Y/edit?tab=t.0l1dhFjCE-0" target="_blank" class="btn">View Project on Google Docs</a>
+            </div>
+            <div class="project-card">
+                <img class = "cite" src="/pictures/partial-mesh.png" alt="Project 2">
+                <h3>Thesis Project</h3>
+                <p>Thesis Project entitled "Designing a Partial Mesh Network with Spanning Tree Protocol (STP) for the Municipal Hall of Balete, Batangas</p>
+                <a href="https://docs.google.com/document/d/16YfwgLQTwaxRtOMpDE83ymF81m90s-eFFqt7xXhM9aY/edit?usp=sharing" target="_blank" class="btn">View Project on Google Docs</a>
             </div>
         </div>
     </section>
-
+<!-- Contant Me section para sa mga social media ko and para sa form para sa message. -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <div class="contact-content">
@@ -86,7 +141,7 @@
             </div>
         </div>
     </section>
-
+<!--footer para sa copyright and name. -->
     <footer>
         <p>&copy; 2025 Karl Angelo Aguinaldo. All rights reserved.</p>
     </footer>

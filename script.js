@@ -8,15 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
-const form = document.querySelector('.contact-form');
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for your message! (This is a demo - no backend functionality (still working on the backend part.))');
-    form.reset();
-});
-
-
 const observerOptions = {
     threshold: 0.2,
     rootMargin: '0px'

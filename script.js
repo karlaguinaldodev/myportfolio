@@ -113,16 +113,3 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 
-const inputs = form.querySelectorAll('input, textarea');
-
-inputs.forEach(input => {
-    input.addEventListener('focus', () => {
-        input.parentElement.classList.add('input-focused');
-    });
-    
-    input.addEventListener('blur', () => {
-        if (!input.value) {
-            input.parentElement.classList.remove('input-focused');
-        }
-    });
-}); 

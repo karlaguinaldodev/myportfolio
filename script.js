@@ -1,66 +1,65 @@
 // from AI pa to lahat, trying to understand the code even moree hehehe
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
     });
+  });
 });
 
 const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '0px'
+  threshold: 0.2,
+  rootMargin: "0px",
 };
 
 const fadeUpObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-up-show');
-        }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-up-show");
+    }
+  });
 }, observerOptions);
 
-
-document.querySelectorAll('section, .project-card, .hobby-card').forEach(element => {
-    element.classList.add('fade-up');
+document
+  .querySelectorAll("section, .project-card, .hobby-card")
+  .forEach((element) => {
+    element.classList.add("fade-up");
     fadeUpObserver.observe(element);
-});
-
+  });
 
 function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
+  let i = 0;
+  element.innerHTML = "";
+  function type() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
     }
-    type();
+  }
+  type();
 }
 
-const heroTitle = document.querySelector('.intro-text h1');
+const heroTitle = document.querySelector(".intro-text h1");
 if (heroTitle) {
-    window.addEventListener('load', () => {
-        typeWriter(heroTitle, heroTitle.textContent);
-    });
+  window.addEventListener("load", () => {
+    typeWriter(heroTitle, heroTitle.textContent);
+  });
 }
 
+const skillElements = document.querySelectorAll(".skills li");
+skillElements.forEach((skill) => {
+  skill.addEventListener("mouseenter", () => {
+    skill.style.transform = "scale(1.1) rotate(0deg)";
+  });
 
-const skillElements = document.querySelectorAll('.skills li');
-skillElements.forEach(skill => {
-    skill.addEventListener('mouseenter', () => {
-        skill.style.transform = 'scale(1.1) rotate(0deg)';
-    });
-    
-    skill.addEventListener('mouseleave', () => {
-        skill.style.transform = 'scale(1) rotate(0deg)';
-    });
+  skill.addEventListener("mouseleave", () => {
+    skill.style.transform = "scale(1) rotate(0deg)";
+  });
 });
 
-const styles = document.createElement('style');
+const styles = document.createElement("style");
 styles.textContent = `
     .fade-up {
         opacity: 0;
@@ -95,21 +94,27 @@ styles.textContent = `
 `;
 document.head.appendChild(styles);
 
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("mouseenter", (e) => {
+    const img = card.querySelector("img");
+    if (img) {
+      img.style.transform = "scale(1.05) rotate(0deg)";
+    }
+  });
 
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', (e) => {
-        const img = card.querySelector('img');
-        if (img) {
-            img.style.transform = 'scale(1.05) rotate(0deg)';
-        }
-    });
-    
-    card.addEventListener('mouseleave', (e) => {
-        const img = card.querySelector('img');
-        if (img) {
-            img.style.transform = 'scale(1) rotate(0deg)';
-        }
-    });
+  card.addEventListener("mouseleave", (e) => {
+    const img = card.querySelector("img");
+    if (img) {
+      img.style.transform = "scale(1) rotate(0deg)";
+    }
+  });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".nav-links");
 
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+  });
+});

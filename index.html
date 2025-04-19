@@ -1,13 +1,9 @@
-<!-- Halos lahat ay from AI, and may mga dinagdag lang me and inedit. For now inaaral 
- ko lahat ng mga features ng html and css and javascript. -->
 <!DOCTYPE html>
 <html lang="en">
-  <!-- para hindi kita ng users kaya nasa head and nag add ako ng link ng styles.css and font awesome 
-      para sa mga logo like facebook, instagram, linkedin, github, etc. -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>k's Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -15,11 +11,13 @@
     />
   </head>
   <body>
-    <!-- navigation bar para sa Portfolio, Home About Projects Contact -->
     <nav>
       <div class="nav-content" id="navbar">
         <div class="logo">
           <a>k's Portfolio</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
         </div>
         <ul class="nav-links" id="nav-links">
           <li><a href="#home">Home</a></li>
@@ -29,7 +27,7 @@
         </ul>
       </div>
     </nav>
-    <!--section para sa profile pic, and intro text na unang makikita ng users -->
+
     <section id="home" class="hero">
       <div class="hero-content">
         <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic" />
@@ -39,9 +37,6 @@
         </div>
       </div>
     </section>
-
-    <!--section para sa skills ko and sa hobbies. pinagtabi na yung dalawa kaya sa isang 
-     section lang. I used FontAwesome as well para sa visual representation-->
     <section id="about" class="about">
       <h2>About Me</h2>
       <div class="about-container">
@@ -78,8 +73,10 @@
               <h3>Back-end</h3>
               <ul>
                 <li>Python</li>
+                <li>Node.js</li>
                 <li>Flask</li>
                 <li>MySQL</li>
+                <li>PostgreSQL</li>
               </ul>
               <br />
               <h3>Tools & Other</h3>
@@ -92,7 +89,6 @@
             </div>
           </div>
         </div>
-        <!--div for my hobbies, and nag add ako ng font awesome para sa mga logo ng gaming, coding, reading, and music-->
         <div class="hobbies-content">
           <h2>My Hobbies</h2>
           <div class="hobby-cards">
@@ -102,6 +98,18 @@
               <p>
                 Building personal projects and learning more about programming.
               </p>
+            </div>
+            <div class="hobby-card">
+              <i class="fas fa-rocket"></i>
+              <h3>Exploring</h3>
+              <p>
+                Exploring new technologies or frameworks to enhance my skills.
+              </p>
+            </div>
+            <div class="hobby-card">
+              <i class="fas fa-video"></i>
+              <h3>Watching</h3>
+              <p>Learning new concepts through dev tutorials.</p>
             </div>
             <div class="hobby-card">
               <i class="fas fa-book-reader"></i>
@@ -125,8 +133,6 @@
         </div>
       </div>
     </section>
-    <!--section para sa mga projects ko naman, i have 3 projects and 1 thesis project nag href 
-  link lang para dalhin yun sa link ng figma at google docs. -->
     <section id="projects" class="projects">
       <h2>My Projects</h2>
       <div class="project-grid">
@@ -217,7 +223,6 @@
         </div>
       </div>
     </section>
-    <!-- Contant Me section para sa mga social media ko and para sa form para sa message. -->
     <section id="contact" class="contact">
       <h2>Connect With Me</h2>
       <p>Let's build something great together—reach out anytime!</p>
@@ -238,7 +243,6 @@
         ></a>
       </div>
     </section>
-    <!--footer para sa copyright and name. -->
     <footer>
       <p>&copy; 2025 Karl Angelo Aguinaldo. All rights reserved.</p>
     </footer>

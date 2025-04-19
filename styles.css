@@ -71,13 +71,16 @@ nav {
     letter-spacing: 1px;
     text-decoration: none;
     color: #333333;
-    transition: color 0.3s;
     font-weight: 500;
     position: relative;
 }
 
 .nav-links a::after {
     display: none;
+}
+
+.nav-links a:hover{
+    text-decoration: underline;
 }
 
 .hero {

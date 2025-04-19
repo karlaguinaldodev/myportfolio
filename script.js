@@ -134,3 +134,27 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.classList.remove("show");
   });
 });
+
+let lastScrollTop = 0;
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    navbar.style.top = "-60px"; // Adjust height based on your navbar size
+  } else {
+    navbar.style.top = "0";
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+// Hide navbar when clicking links
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navbar.style.top = "-60px"; // Hide navbar on click
+  });
+});

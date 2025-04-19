@@ -1,4 +1,3 @@
-// from AI pa to lahat, trying to understand the code even moree hehehe
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -114,7 +113,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.querySelector(".nav-links");
 
-  hamburger.addEventListener("click", function () {
+  // Toggle menu on hamburger click
+  hamburger.addEventListener("click", function (event) {
+    event.stopPropagation(); // prevent bubbling
     navLinks.classList.toggle("show");
+  });
+
+  // Prevent closing when clicking inside nav
+  navLinks.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+
+  // Close on outside click
+  document.addEventListener("click", function () {
+    navLinks.classList.remove("show");
+  });
+
+  // Close on scroll
+  window.addEventListener("scroll", function () {
+    navLinks.classList.remove("show");
   });
 });

@@ -12,21 +12,6 @@ const observerOptions = {
   rootMargin: "0px",
 };
 
-const fadeUpObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("fade-up-show");
-    }
-  });
-}, observerOptions);
-
-document
-  .querySelectorAll("section, .project-card, .hobby-card")
-  .forEach((element) => {
-    element.classList.add("fade-up");
-    fadeUpObserver.observe(element);
-  });
-
 function typeWriter(element, text, speed = 100) {
   let i = 0;
   element.innerHTML = "";
@@ -113,23 +98,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.querySelector(".nav-links");
 
-  // Toggle menu on hamburger click
   hamburger.addEventListener("click", function (event) {
-    event.stopPropagation(); // prevent bubbling
+    event.stopPropagation();
     navLinks.classList.toggle("show");
   });
 
-  // Prevent closing when clicking inside nav
   navLinks.addEventListener("click", function (event) {
     event.stopPropagation();
   });
 
-  // Close on outside click
   document.addEventListener("click", function () {
     navLinks.classList.remove("show");
   });
 
-  // Close on scroll
   window.addEventListener("scroll", function () {
     navLinks.classList.remove("show");
   });
@@ -142,7 +123,7 @@ window.addEventListener("scroll", function () {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
-    navbar.style.top = "-60px"; // Adjust height based on your navbar size
+    navbar.style.top = "-60px";
   } else {
     navbar.style.top = "0";
   }
@@ -150,11 +131,25 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-// Hide navbar when clicking links
 const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navbar.style.top = "-60px"; // Hide navbar on click
+    navbar.style.top = "-60px";
   });
+});
+
+function openModal(img) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = img.dataset.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeModal();
 });

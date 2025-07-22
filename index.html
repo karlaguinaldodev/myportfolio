@@ -23,6 +23,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certificates</a></li>
           <li><a href="#contact">Connect</a></li>
         </ul>
       </div>
@@ -37,7 +38,7 @@
         />
         <div class="intro-text">
           <h1>HI, I'M KARL ANGELO AGUINALDO</h1>
-          <p>BS in Information Technology</p>
+          <p>BS in Information Technology Graduate</p>
         </div>
       </div>
     </section>
@@ -263,9 +264,125 @@
         </div>
       </div>
     </section>
+    <section id="certifications" class="certifications">
+      <h2>Certifications</h2>
+      <h4>CCNA Certifications</h4>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <img
+            src="images/ccna7one.png"
+            data-src="images/ccna7one.png"
+            alt="CCNA Certificate"
+            class="certificate-img"
+            onclick="openModal(this)"
+          />
+          <h3>CCNAv7: Switching, Routing , and Wireless Essentials</h3>
+          <p>
+            Focused on core networking skills such as VLANs, routing, switching,
+            and wireless setup. Gained hands-on experience in configuring
+            routers, switches, and securing small to medium networks.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <img
+            src="images/ccna7two.png"
+            data-src="images/ccna7two.png"
+            alt="CCNA Certificate"
+            class="certificate-img"
+            onclick="openModal(this)"
+          />
+          <h3>CCNAv7: Enterprise Networking, Security, and Automation</h3>
+          <p>
+            Covers advanced networking concepts including enterprise
+            infrastructure, security, and automation. Learned to configure and
+            secure scalable networks and explored basics of network automation
+          </p>
+        </div>
+      </div>
+
+      <h4>Other Certifications</h4>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <img
+            src="images/lets-git-it.png"
+            data-src="images/lets-git-it.png"
+            alt="CCNA Certificate"
+            class="certificate-img"
+            onclick="openModal(this)"
+          />
+          <h3>LET'S GIT IT [GIT & GitHub]</h3>
+          <p>
+            Attended a hands-on seminar on version control using Git and GitHub.
+            Learned essential commands, branch management, and collaborative
+            workflows for efficient project tracking and code management.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <img
+            src="images/COC-qrio.png"
+            data-src="images/COC-qrio.png"
+            alt="CCNA Certificate"
+            class="certificate-img"
+            onclick="openModal(this)"
+          />
+          <h3>Software Engineering Intern [COC]</h3>
+          <p>
+            Built a solid foundation in Web Development through active
+            participation in hackathons and hands-on real-time project
+            development, enhancing both technical skills and collaborative
+            problem-solving.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <img
+            src="images/s2sone.png"
+            data-src="images/s2sone.png"
+            alt="CCNA Certificate"
+            class="certificate-img"
+            onclick="openModal(this)"
+          />
+          <h3>Skills to Succeed Academy</h3>
+          <p>
+            Completed the Skills to Succeed Academy by Accenture, covering key
+            modules in lifelong learning, emotional intelligence,
+            problem-solving, critical thinking, coding, and data literacy to
+            build a strong foundation for career readiness.
+          </p>
+        </div>
+      </div>
+      <h4>Udemy Certifications</h4>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <img
+            src="images/udemy-python1.jpg"
+            data-src="images/udemy-python1.jpg"
+            alt="CCNA Certificate"
+            class="certificate-img"
+            onclick="openModal(this)"
+          />
+          <h3>Python Programming Language</h3>
+          <p>
+            Completed a Udemy course on Python programming, gaining foundational
+            skills in syntax, data types, control structures, and basic
+            problem-solving using Python.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="contact">
-      <h2>Connect With Me</h2>
-      <p>Let's build something great together—reach out anytime!</p>
+      <h2 class="connect-title">Connect With Me</h2>
+      <p class="email-paragraph">
+        Interested in collaborating or have something in mind? Let&rsquo;s talk
+        — just send an email to
+        <a href="mailto:aguinaldokarl.al@gmail.com"
+          >aguinaldokarl.al@gmail.com.</a
+        >
+        Thank you!
+      </p>
       <div class="social-links">
         <a href="https://github.com/karlaguinaldodev" target="_blank"
           ><i class="fab fa-github"></i
@@ -274,9 +391,6 @@
           href="https://www.linkedin.com/in/karl-angelo-aguinaldo-b2199028b/"
           target="_blank"
           ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="https://www.instagram.com/geloaguinaldo/" target="_blank"
-          ><i class="fab fa-instagram"></i
         ></a>
         <a href="https://www.facebook.com/geloaguinaldo26/" target="_blank"
           ><i class="fab fa-facebook"></i
@@ -287,5 +401,9 @@
       <p>&copy; 2025 Karl Angelo Aguinaldo. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
   </body>
 </html>

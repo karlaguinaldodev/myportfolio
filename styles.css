@@ -134,6 +134,23 @@ h2 {
   margin-bottom: 3rem;
 }
 
+.connect-title {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--primary-color);
+  text-align: center;
+}
+
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -252,7 +269,8 @@ h2 {
   font-size: 1rem;
 }
 
-.project-grid {
+.project-grid,
+.cert-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
@@ -261,7 +279,8 @@ h2 {
   padding: 2rem;
 }
 
-.project-card {
+.project-card,
+.cert-card {
   border: none;
   box-shadow: none;
   padding: 1rem;
@@ -276,7 +295,8 @@ h2 {
   border: 1px solid var(--medium-mist);
 }
 
-.project-card:hover {
+.project-card:hover,
+.cert-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(51, 51, 51, 0.1);
 }
@@ -293,14 +313,16 @@ h2 {
   opacity: 1;
 }
 
-.project-card h3 {
+.project-card h3,
+.cert-card h3 {
   font-family: var(--font-primary);
   font-size: 1.2rem;
   margin: 1.5rem 0 0.5rem;
   color: #333;
 }
 
-.project-card p {
+.project-card p,
+.cert-card p {
   font-size: 0.9rem;
   color: var(--secondary-color);
   margin: 0 0 1.5rem;
@@ -314,7 +336,7 @@ h2 {
   letter-spacing: 1px;
   border: 1px solid var(--accent-color);
   padding: 0.8rem 1.5rem;
-  background-color: var(--blue-mist); /* Updated background color */
+  background-color: var(--blue-mist);
   color: #fff;
   text-decoration: none;
   font-weight: 400;
@@ -409,7 +431,7 @@ footer {
 }
 
 .intro-text p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--secondary-color);
 }
 
@@ -425,6 +447,88 @@ footer {
   text-align: center;
 }
 
+.certificates-section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.certificate {
+  margin-bottom: 60px;
+}
+
+.certificate-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  text-align: center;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.modal .close:hover {
+  color: #ccc;
+}
+
+.email-paragraph {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.email-paragraph a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.email-paragraph a:hover {
+  color: #005fa3;
+  border-bottom: 2px solid #005fa3;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -438,7 +542,8 @@ footer {
     padding: 3rem 1rem;
   }
 
-  .project-grid {
+  .project-grid,
+  .cert-grid {
     grid-template-columns: 1fr;
   }
 
